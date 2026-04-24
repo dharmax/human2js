@@ -19,6 +19,14 @@
   },
   "author": "dharmax",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dharmax/human2js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dharmax/human2js/issues"
+  },
+  "homepage": "https://github.com/dharmax/human2js#readme",
   "dependencies": {
     "@dharmax/llm-utils": "^0.1.0"
   },
