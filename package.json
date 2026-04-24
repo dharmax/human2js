@@ -1,0 +1,30 @@
+{
+  "name": "@dharmax/human2js",
+  "version": "0.1.0",
+  "description": "High-fidelity English-to-JavaScript compilation and persistent orchestration engine.",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "esbuild src/index.mts --bundle --platform=node --format=esm --outfile=dist/index.mjs --sourcemap --resolve-extensions=.mts,.mtsx,.js,.json --external:node:fs/promises --external:node:path --external:node:child_process --external:node:util --external:node:vm --external:@dharmax/llm-utils && tsc --emitDeclarationOnly --outDir dist",
+    "test": "node --test dist/tests/**/*.test.js"
+  },
+  "author": "dharmax",
+  "license": "MIT",
+  "dependencies": {
+    "@dharmax/llm-utils": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.28.0",
+    "typescript": "^5.0.0"
+  }
+}
